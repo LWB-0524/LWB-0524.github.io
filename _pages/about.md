@@ -14,8 +14,12 @@ I am a master's student at [Beijing University of Technology](https://english.bj
 
 ### Academic Background
 
-- **Bachelor's Degree in Civil Engineering**, Beijing University of Technology, 2020
-- **Master's Degree in Building Information Modeling**, Beijing University of Technology, 2023
+- **Bachelor of Engineering in Civil Engineering (Honours Degrees)**
+  - Beijing University of Technology, Beijing, China
+  - 09/2018-07/2022
+  - GPA: 3.92/4.0 (Rank:3/155, Top 2%)
+  - Be recommended for admission to a master’s degree without an entrance exam
+- **Masters by Research in Smart Construction**, Beijing University of Technology, 09/2022-07/2025
 
 ### Research Interests
 
