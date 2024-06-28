@@ -7,7 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-## About Me
 
 Here is Wangbing Li (厉望秉).
 
