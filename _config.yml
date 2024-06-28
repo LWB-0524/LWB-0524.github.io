@@ -13,7 +13,7 @@ title_separator          : "-"
 name                     : &name "Wangbing Li"
 description              : &description "personal description"
 url                      : https://lwb-0524.github.io/WangbingLi/ 
-baseurl                  : "" # the subpath of your site,
+baseurl                  : "" 
 repository               : "LWB-0524/WangbingLi"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
