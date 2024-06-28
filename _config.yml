@@ -12,7 +12,7 @@ title                    : "Wangbing Li/Personal Homepage"
 title_separator          : "-"
 name                     : &name "Wangbing Li"
 description              : &description "personal description"
-url                      : https://lwb-0524.github.io/WangbingLi/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://lwb-0524.github.io/WangbingLi/ 
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "LWB-0524/WangbingLi"
 
