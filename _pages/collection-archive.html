@@ -4,6 +4,11 @@ title: "Posts by Collection"
 permalink: /collection-archive/
 author_profile: true
 ---
+<div class="publications">
+  {% for post in site.publications %}
+    {% include archive-single.html post=post type="grid" %}
+  {% endfor %}
+</div>
 
 {% include base_path %}
 {% capture written_label %}'None'{% endcapture %}
