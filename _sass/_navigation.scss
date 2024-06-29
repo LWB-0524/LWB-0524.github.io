@@ -172,6 +172,27 @@
    Priority plus navigation
    ========================================================================== */
 
+.navbar {
+  display: flex;
+  justify-content: space-between; // 左右对齐
+  align-items: center;
+  padding: 0 2em; // 调整整体导航的内边距
+}
+
+.nav-left {
+  flex: 0 0 auto; // 固定左侧部分宽度
+}
+
+.nav-right {
+  flex: 1; // 右侧部分占据剩余空间
+  display: flex;
+  justify-content: center; // 居中对齐右侧部分
+}
+
+.nav-right a {
+  margin: 0 1em; // 设置导航项的间距，根据需要调整
+}
+
 .greedy-nav {
   position: relative;
   min-width: 250px;
