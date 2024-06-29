@@ -183,12 +183,20 @@
 
   .nav-left {
     flex: 0 0 auto;
+    a {
+      font-weight: bold; // 使Homepage（网站标题）保持加粗
+    }
   }
 
   .nav-right {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+
+    a {
+      font-weight: normal; // 确保右侧导航项使用正常字重
+    }
+
   }
 
   .visible-links {
@@ -201,9 +209,9 @@
     li {
       margin: 0 1em;
 
-      &:first-child {
-        font-weight: bold;
-        a { margin-left: 0; }
+  #    &:first-child {
+  #      font-weight: bold;
+  #      a { margin-left: 0; }
       }
 
       &:last-child a { margin-right: 0; }
