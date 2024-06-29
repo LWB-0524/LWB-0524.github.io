@@ -179,6 +179,7 @@
   width: 100%;
   background: $background-color;
   min-width: 250px;
+  position: relative; // 添加这行以支持绝对定位的子元素
 
   .nav-left {
     flex: 0 0 auto;
@@ -249,11 +250,7 @@
     cursor: pointer;
     z-index: 100;
   }
-}
 
-.masthead__menu-item {
-  display: inline-block;
-}
   .hidden-links {
     position: absolute;
     top: 100%;
@@ -313,6 +310,9 @@
   }
 }
 
+.masthead__menu-item {
+  display: inline-block;
+}
 
 /*
    Navigation list
