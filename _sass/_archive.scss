@@ -84,6 +84,28 @@
   }
 }
 
+/* Publication Item Style */
+.publication-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.publication-teaser {
+  flex: 0 0 200px; /* 固定宽度，可根据需要调整 */
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.publication-teaser img {
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius; /* 使用你定义的边框圆角变量 */
+}
+
+.publication-content {
+  flex: 1;
+}
+
 
 /*
    List view
