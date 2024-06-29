@@ -172,46 +172,68 @@
    Priority plus navigation
    ========================================================================== */
 
-.navbar {
+.greedy-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
-}
-
-.nav-left {
-  flex: 0 0 auto;
-}
-
-.nav-right {
-  flex: 1;
-  display: flex;
-  justify-content: center; // 改为右对齐
-}
-
-.nav-right .visible-links {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-right a {
-  margin: 0 0 0 1em; // 只在左侧添加间距
-}
-
-.greedy-nav {
-  position: relative;
-  min-width: 250px;
+  width: 100%;
   background: $background-color;
+  min-width: 250px;
+
+  .nav-left {
+    flex: 0 0 auto;
+  }
+
+  .nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .visible-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 1em;
+
+      &:first-child {
+        font-weight: bold;
+        a { margin-left: 0; }
+      }
+
+      &:last-child a { margin-right: 0; }
+    }
+  }
 
   a {
     display: block;
-    margin: 0 1rem;
     padding: 0.5rem 0;
     color: $masthead-link-color;
     text-decoration: none;
+    position: relative;
 
     &:hover {
       color: $masthead-link-color-hover;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      background: mix(#fff, $primary-color, 50%);
+      transition: $global-transition;
+      transform: scaleX(0);
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
     }
   }
 
@@ -227,56 +249,11 @@
     cursor: pointer;
     z-index: 100;
   }
+}
 
-  .visible-links {
-    display: table;
-
-    li {
-      display: table-cell;
-      vertical-align: middle;
-
-      &:first-child {
-        font-weight: bold;
-        text-wrap: wrap;
-
-        a {
-          margin-left: 0;
-        }
-      }
-
-      &:last-child {
-        a {
-          margin-right: 0;
-        }
-      }
-    }
-
-    a {
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 4px;
-        background: mix(#fff, $primary-color, 50%);
-        width: 100%;
-        -webkit-transition: $global-transition;
-        transition: $global-transition;
-        -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-                transform: scaleX(0); /* hide*/
-      }
-
-      &:hover:before {
-        -webkit-transform: scaleX(1);
-            -ms-transform: scaleX(1);
-                transform: scaleX(1); /* reveal*/
-      }
-    }
-  }
-
+.masthead__menu-item {
+  display: inline-block;
+}
   .hidden-links {
     position: absolute;
     top: 100%;
