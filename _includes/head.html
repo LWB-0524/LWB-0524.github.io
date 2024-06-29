@@ -21,8 +21,15 @@
 <meta http-equiv="cleartype" content="on">
 
 <style>
+  .masthead__inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .masthead__menu {
     display: flex;
+    flex: 1;
     justify-content: center;
   }
 
@@ -31,10 +38,13 @@
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
   }
 
   .visible-links li {
     margin: 0 10px; /* 根据需要调整间距 */
+  }
+
+  .masthead__menu-item--lg {
+    margin-right: auto; /* 将 HomePage 左对齐 */
   }
 </style>
