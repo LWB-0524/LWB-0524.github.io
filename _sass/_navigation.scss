@@ -174,23 +174,28 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between; // 左右对齐
+  justify-content: space-between;
   align-items: center;
-  padding: 0 2em; // 调整整体导航的内边距
+  padding: 0 2em;
 }
 
 .nav-left {
-  flex: 0 0 auto; // 固定左侧部分宽度
+  flex: 0 0 auto;
 }
 
 .nav-right {
-  flex: 1; // 右侧部分占据剩余空间
+  flex: 1;
   display: flex;
-  justify-content: center; // 居中对齐右侧部分
+  justify-content: flex-end; // 改为右对齐
+}
+
+.nav-right .visible-links {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-right a {
-  margin: 0 1em; // 设置导航项的间距，根据需要调整
+  margin: 0 0 0 1em; // 只在左侧添加间距
 }
 
 .greedy-nav {
