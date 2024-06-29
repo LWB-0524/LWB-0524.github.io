@@ -207,7 +207,7 @@
     list-style: none;
 
     li {
-      margin: 0 1em;
+      margin: 0 1.5em; //调整间距
 
       &:last-child a { margin-right: 0; }
     }
