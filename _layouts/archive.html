@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Publications
 ---
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -19,33 +20,20 @@ layout: default
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
+    {% for post in site.publications %}
     <div class="publication-item">
       <div class="publication-teaser">
-        <img src="path/to/image1.jpg" alt="Article Image">
+        <img src="{{ post.header.teaser }}" alt="Article Image">
       </div>
       <div class="publication-content">
-        <h3 class="article-title"><a href="#">Paper Title Number 4</a></h3>
-        <p class="authors">Published in GitHub Journal of Bugs, 2024</p>
-        <p class="description">This paper is about fixing template issue #693.</p>
-        <p class="citation">Recommended citation: Your Name, You. (2024). "Paper Title Number 4." GitHub Journal of Bugs. 1(3).</p>
-        <a href="link-to-paper.pdf" class="pdf-link">Download Paper</a>
-        <a href="link-to-slides.pdf" class="abstract-link">Download Slides</a>
+        <h3 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="authors">Published in {{ post.venue }}, {{ post.date | date: "%Y" }}</p>
+        <p class="description">{{ post.excerpt }}</p>
+        <p class="citation">{{ post.citation }}</p>
+        <a href="{{ post.paperurl }}" class="pdf-link">Download Paper</a>
+        <a href="{{ post.slidesurl }}" class="abstract-link">Download Slides</a>
       </div>
     </div>
-    <div class="publication-item">
-      <div class="publication-teaser">
-        <img src="path/to/image2.jpg" alt="Article Image">
-      </div>
-      <div class="publication-content">
-        <h3 class="article-title"><a href="#">Closed-Loop Management System for Design of a Building Information Modeling Curriculum to Meet Industry Requirements</a></h3>
-        <p class="authors">Published in International Journal of Engineering Education (JCR Q3, IF=0.7), 2023</p>
-        <p class="description">The study provides valuable insights into the gaps between the competency requirements of the AEC industry and the current BIM curricula in colleges.</p>
-        <p class="citation">Recommended citation: Zhao Xuefeng, Li Wangbing and et al. (2023). "Closed-Loop Management System for Design of a Building Information Modeling Curriculum to Meet Industry Requirements." International Journal of Engineering Education Vol. 39, No. 6, pp. 1386–1399.</p>
-        <a href="link-to-paper.pdf" class="pdf-link">Download Paper</a>
-        <a href="link-to-slides.pdf" class="abstract-link">Download Slides</a>
-      </div>
-    </div>
-    <!-- Add more publication-item divs as needed -->
+    {% endfor %}
   </div>
 </div>
-
